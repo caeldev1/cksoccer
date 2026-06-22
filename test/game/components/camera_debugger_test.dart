@@ -10,18 +10,30 @@ import 'package:super_dash/game/game.dart';
 
 class _TestGame extends FlameGame with HasKeyboardHandlerComponents {}
 
-class _MockRawKeyUpEvent extends Mock implements RawKeyUpEvent {
+class _MockKeyUpEvent extends Mock implements KeyUpEvent {
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return '';
   }
 }
 
-class _MockRawKeyDownEvent extends Mock implements RawKeyDownEvent {
+class _MockKeyDownEvent extends Mock implements KeyDownEvent {
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return '';
   }
+}
+
+KeyDownEvent _mockKeyDown(LogicalKeyboardKey key) {
+  final event = _MockKeyDownEvent();
+  when(() => event.logicalKey).thenReturn(key);
+  return event;
+}
+
+KeyUpEvent _mockKeyUp(LogicalKeyboardKey key) {
+  final event = _MockKeyUpEvent();
+  when(() => event.logicalKey).thenReturn(key);
+  return event;
 }
 
 void main() {
@@ -48,10 +60,9 @@ void main() {
         final controller =
             cameraDebugger.firstChild<KeyboardListenerComponent>()!;
 
-        final keyDown = _MockRawKeyDownEvent();
-        when(() => keyDown.logicalKey).thenReturn(LogicalKeyboardKey.keyW);
-
-        controller.onKeyEvent(keyDown, {LogicalKeyboardKey.keyW});
+        controller.onKeyEvent(_mockKeyDown(LogicalKeyboardKey.keyW), {
+          LogicalKeyboardKey.keyW,
+        });
 
         cameraDebugger.update(0.1);
 
@@ -59,10 +70,9 @@ void main() {
         expect(updatedPosition.y, lessThan(initialPosition.y));
 
         // Should not move anymore when the key is released
-        final keyUp = _MockRawKeyUpEvent();
-        when(() => keyUp.logicalKey).thenReturn(LogicalKeyboardKey.keyW);
-
-        controller.onKeyEvent(keyUp, {LogicalKeyboardKey.keyW});
+        controller.onKeyEvent(_mockKeyUp(LogicalKeyboardKey.keyW), {
+          LogicalKeyboardKey.keyW,
+        });
         cameraDebugger.update(0.1);
 
         final finalPosition = cameraDebugger.position.clone();
@@ -79,10 +89,9 @@ void main() {
       final controller =
           cameraDebugger.firstChild<KeyboardListenerComponent>()!;
 
-      final keyDown = _MockRawKeyDownEvent();
-      when(() => keyDown.logicalKey).thenReturn(LogicalKeyboardKey.keyS);
-
-      controller.onKeyEvent(keyDown, {LogicalKeyboardKey.keyS});
+      controller.onKeyEvent(_mockKeyDown(LogicalKeyboardKey.keyS), {
+        LogicalKeyboardKey.keyS,
+      });
 
       cameraDebugger.update(0.1);
 
@@ -90,10 +99,9 @@ void main() {
       expect(updatedPosition.y, greaterThan(initialPosition.y));
 
       // Should not move anymore when the key is released
-      final keyUp = _MockRawKeyUpEvent();
-      when(() => keyUp.logicalKey).thenReturn(LogicalKeyboardKey.keyS);
-
-      controller.onKeyEvent(keyUp, {LogicalKeyboardKey.keyS});
+      controller.onKeyEvent(_mockKeyUp(LogicalKeyboardKey.keyS), {
+        LogicalKeyboardKey.keyS,
+      });
       cameraDebugger.update(0.1);
 
       final finalPosition = cameraDebugger.position.clone();
@@ -109,10 +117,9 @@ void main() {
       final controller =
           cameraDebugger.firstChild<KeyboardListenerComponent>()!;
 
-      final keyDown = _MockRawKeyDownEvent();
-      when(() => keyDown.logicalKey).thenReturn(LogicalKeyboardKey.keyA);
-
-      controller.onKeyEvent(keyDown, {LogicalKeyboardKey.keyA});
+      controller.onKeyEvent(_mockKeyDown(LogicalKeyboardKey.keyA), {
+        LogicalKeyboardKey.keyA,
+      });
 
       cameraDebugger.update(0.1);
 
@@ -120,10 +127,9 @@ void main() {
       expect(updatedPosition.x, lessThan(initialPosition.x));
 
       // Should not move anymore when the key is released
-      final keyUp = _MockRawKeyUpEvent();
-      when(() => keyUp.logicalKey).thenReturn(LogicalKeyboardKey.keyA);
-
-      controller.onKeyEvent(keyUp, {LogicalKeyboardKey.keyA});
+      controller.onKeyEvent(_mockKeyUp(LogicalKeyboardKey.keyA), {
+        LogicalKeyboardKey.keyA,
+      });
       cameraDebugger.update(0.1);
 
       final finalPosition = cameraDebugger.position.clone();
@@ -139,10 +145,9 @@ void main() {
       final controller =
           cameraDebugger.firstChild<KeyboardListenerComponent>()!;
 
-      final keyDown = _MockRawKeyDownEvent();
-      when(() => keyDown.logicalKey).thenReturn(LogicalKeyboardKey.keyD);
-
-      controller.onKeyEvent(keyDown, {LogicalKeyboardKey.keyD});
+      controller.onKeyEvent(_mockKeyDown(LogicalKeyboardKey.keyD), {
+        LogicalKeyboardKey.keyD,
+      });
 
       cameraDebugger.update(0.1);
 
@@ -150,10 +155,9 @@ void main() {
       expect(updatedPosition.x, greaterThan(initialPosition.x));
 
       // Should not move anymore when the key is released
-      final keyUp = _MockRawKeyUpEvent();
-      when(() => keyUp.logicalKey).thenReturn(LogicalKeyboardKey.keyD);
-
-      controller.onKeyEvent(keyUp, {LogicalKeyboardKey.keyD});
+      controller.onKeyEvent(_mockKeyUp(LogicalKeyboardKey.keyD), {
+        LogicalKeyboardKey.keyD,
+      });
       cameraDebugger.update(0.1);
 
       final finalPosition = cameraDebugger.position.clone();
@@ -168,20 +172,18 @@ void main() {
       final controller =
           cameraDebugger.firstChild<KeyboardListenerComponent>()!;
 
-      final keyDown = _MockRawKeyDownEvent();
-      when(() => keyDown.logicalKey).thenReturn(LogicalKeyboardKey.keyM);
-
-      controller.onKeyEvent(keyDown, {LogicalKeyboardKey.space});
+      controller.onKeyEvent(_mockKeyDown(LogicalKeyboardKey.keyM), {
+        LogicalKeyboardKey.space,
+      });
 
       cameraDebugger.update(0.1);
 
       expect(cameraDebugger.speed, equals(900));
 
       // Should not move anymore when the key is released
-      final keyUp = _MockRawKeyUpEvent();
-      when(() => keyUp.logicalKey).thenReturn(LogicalKeyboardKey.keyM);
-
-      controller.onKeyEvent(keyUp, {LogicalKeyboardKey.keyM});
+      controller.onKeyEvent(_mockKeyUp(LogicalKeyboardKey.keyM), {
+        LogicalKeyboardKey.keyM,
+      });
       cameraDebugger.update(0.1);
 
       expect(cameraDebugger.speed, equals(300));

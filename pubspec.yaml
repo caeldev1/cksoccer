@@ -30,7 +30,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   font_awesome_flutter: ^10.6.0
-  intl: ^0.18.0
+  intl: ^0.20.2
   leaderboard_repository:
     path: packages/leaderboard_repository
   leap: ^0.2.1
@@ -53,11 +53,6 @@ dev_dependencies:
   very_good_analysis: ^5.0.0
 
 dependency_overrides:
-  flame_tiled:
-    git:
-      url: https://github.com/flame-engine/flame.git
-      ref: main
-      path: packages/flame_tiled
   leap:
     git:
       url: https://github.com/VeryGoodOpenSource/leap.git
