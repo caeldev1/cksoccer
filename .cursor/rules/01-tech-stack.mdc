@@ -1,0 +1,46 @@
+---
+description: Tech stack rules for CkSoccer using Flutter and Flame
+alwaysApply: true
+---
+
+Stack decisions for this project:
+
+Framework and language:
+- Use Flutter for app shell, menus, overlays, navigation, settings, and non-game UI.
+- Use Dart for domain logic and application logic.
+- Use Flame for the real-time gameplay scene, game loop, collision-driven interactions, and board rendering where appropriate.
+
+State and architecture:
+- GetX is the default choice for lightweight app state, routing, and controllers outside the Flame scene.
+- Prefer plain Dart classes for puzzle rules, trajectory simulation, level logic, and config models.
+- SharedPreferences is the default choice for lightweight local persistence.
+- flame_audio is the default choice for gameplay audio when audio is introduced.
+
+Dependencies:
+- Do not introduce new packages unless the task requires them and the existing stack is insufficient.
+- Avoid heavyweight architecture packages unless clearly justified.
+- Avoid premature backend, analytics, ads, or IAP integration in MVP tasks.
+
+Flame usage rules:
+- Use Flame when the task involves:
+  - game loop timing
+  - moving entities
+  - collision or hitbox logic
+  - sprite/component-based gameplay
+  - real-time rendering of the puzzle board
+- Do not force Flame into simple app UI screens that are better handled in Flutter widgets.
+
+Physics rules:
+- Prefer deterministic custom trajectory math for ball redirection and puzzle outcomes.
+- Do not introduce Forge2D or full physics simulation unless a task explicitly requires it.
+- This game should feel like a controllable puzzle first, not an unstable physics sandbox.
+
+Persistence rules:
+- Keep persistence behind a small service or repository layer.
+- Do not couple SharedPreferences directly to widgets.
+- Do not couple persistence directly to Flame components.
+
+Testing rules:
+- Prefer unit tests for domain logic first.
+- Add widget tests only for important UI flows.
+- Add Flame/game integration tests only when the gameplay layer is stable enough to justify them.

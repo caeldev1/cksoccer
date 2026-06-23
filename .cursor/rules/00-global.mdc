@@ -1,0 +1,17 @@
+---
+description: Global rules for this project
+alwaysApply: true
+---
+
+- This project is a funny Flutter mobile game. It's about a running chicker with a ball soccer that shoot to gain score
+- First inspect the codebase before writing code.
+- Do not invent file names, asset names, or package usage without checking the repository.
+- For any non-trivial task, provide:
+  1. diagnosis
+  2. impacted files
+  3. implementation plan
+- Keep edits minimal and localized.
+- Reuse existing patterns before creating new abstractions.
+- Use Flutter for app shell and non-game screens.
+- Use Flame for gameplay when a real game loop or component system is needed.
+- Prefer clean separation between UI, game loop, domain logic, and persistence.

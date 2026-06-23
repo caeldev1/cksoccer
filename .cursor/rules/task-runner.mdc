@@ -1,0 +1,24 @@
+---
+description: Task execution workflow for the block puzzle project
+alwaysApply: true
+---
+
+# Task Runner Workflow
+
+Before making any code changes:
+1. Read `docs/todos.md`
+2. Find the first task with status `pending`
+3. Change it to `in_progress`
+4. Implement only that task
+5. When finished, update `docs/todos.md`:
+   - mark the task as `done`
+   - set the next eligible `pending` task to `in_progress`
+6. If blocked, mark the task as `blocked` and explain why in the Notes section
+7. Do not work on multiple major tasks in the same run unless explicitly asked
+
+Additional rules:
+- Keep diffs minimal
+- Preserve working behavior
+- Do not redesign unrelated systems
+- Explain what was changed after each task
+- If a task is too large, break it into subtasks in `docs/todos.md` before coding

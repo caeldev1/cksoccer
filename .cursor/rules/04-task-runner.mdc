@@ -1,0 +1,41 @@
+---
+description: Task runner workflow for CkSoccer
+alwaysApply: true
+---
+
+This project uses docs/tasks.md as the execution source of truth.
+
+Required task workflow:
+1. Read docs/tasks.md before implementation work.
+2. Find the first task with Status: in_progress.
+3. If no task is in_progress, find the first task with Status: pending.
+4. Execute only one major task unless explicitly told to continue.
+5. Stay within the selected task scope.
+6. Do not silently pull work from future tasks.
+
+Task update rules:
+- When starting a pending task, change its status to in_progress.
+- When a task is fully completed, change its status to done.
+- Only mark a task done if all Definition of done items are actually satisfied.
+- If work is partial, keep the task in_progress.
+- If blocked, mark it blocked and add a short blocker note under the task.
+- After marking a task done, set the next eligible pending major task to in_progress.
+- Never leave more than one major task in_progress at the same time.
+
+Task discipline:
+- Respect:
+  - Goal
+  - Why
+  - Scope
+  - Do not change
+  - Affected files
+  - Definition of done
+  - Manual tests
+- If the task is underspecified, choose the smallest professional implementation that satisfies it.
+- If the requested work reveals missing prerequisite work, stop and document the issue rather than improvising a huge refactor.
+
+Response discipline after implementation:
+- State which task was executed.
+- List changed files.
+- List manual tests to run.
+- State whether the task was marked done, kept in_progress, or marked blocked.
