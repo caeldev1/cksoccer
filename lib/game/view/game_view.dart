@@ -1,9 +1,9 @@
 import 'package:flame/game.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:super_dash/audio/audio.dart';
-import 'package:super_dash/game/game.dart';
-import 'package:super_dash/game_intro/game_intro.dart';
+import 'package:ck_soccer/audio/audio.dart';
+import 'package:ck_soccer/game/game.dart';
+import 'package:ck_soccer/game_intro/game_intro.dart';
 
 class Game extends StatelessWidget {
   const Game({super.key});
@@ -35,7 +35,7 @@ class GameView extends StatelessWidget {
           GameWidget.controlled(
             loadingBuilder: (context) => const GameBackground(),
             backgroundBuilder: (context) => const GameBackground(),
-            gameFactory: () => SuperDashGame(
+            gameFactory: () => CKSoccer(
               gameBloc: context.read<GameBloc>(),
               audioController: context.read<AudioController>(),
             ),

@@ -5,10 +5,10 @@ import 'package:flame/effects.dart';
 import 'package:flame_tiled/flame_tiled.dart';
 import 'package:flutter/widgets.dart';
 import 'package:leap/leap.dart';
-import 'package:super_dash/audio/audio.dart';
-import 'package:super_dash/game/game.dart';
+import 'package:ck_soccer/audio/audio.dart';
+import 'package:ck_soccer/game/game.dart';
 
-class Player extends JumperCharacter<SuperDashGame> {
+class Player extends JumperCharacter<CKSoccer> {
   Player({
     required this.levelSize,
     required this.cameraViewport,

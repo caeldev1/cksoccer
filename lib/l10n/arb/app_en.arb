@@ -1,6 +1,6 @@
 {
     "@@locale": "en",
-    "gameIntroPageHeadline": "Fly into Super Dash, avoid the bugs, collect points, and see how far you can go!",
+    "gameIntroPageHeadline": "Swipe to meet the team — then tap Play!",
     "@gameIntroPageHeadline": {
         "description": "Text shown in the Headline of the Game Info Page"
     },
@@ -12,7 +12,7 @@
     "@gameInstructionsPageAutoRunTitle": {
         "description": "Text shown in the title of the auto run instruction of the Game Instructions Overlay"
     },
-    "gameInstructionsPageAutoRunDescription": "Welcome to Super Dash. In this game Dash runs automatically.",
+    "gameInstructionsPageAutoRunDescription": "Welcome to CKSoccer. In this game Dash runs automatically.",
     "@gameInstructionsPageAutoRunDescription": {
         "description": "Text shown in the description of the auto run instruction of the Game Instructions Overlay"
     },
@@ -76,24 +76,24 @@
     "@mobileModeUnavailableDescription": {
         "description": "Description shown in the Game Info Page for mobile devices joining from a browser"
     },
-    "superDash": "Super Dash",
-    "@superDash": {
+    "ckSoccer": "CKSoccer",
+    "@ckSoccer": {
         "description": "Game name"
     },
     "howItsMade": "How it's made",
     "@howItsMade": {
         "description": "Text shown in the game info page"
     },
-    "aboutSuperDash": "About Super Dash",
-    "@aboutSuperDash": {
+    "aboutCKSoccer": "About CKSoccer",
+    "@aboutCKSoccer": {
         "description": "Text shown in the game info popup"
     },
     "learn": "Learn ",
     "@learn": {
         "description": "Text shown in the game info popup"
     },
-    "howWeBuiltSuperDash": "how we built Super Dash",
-    "@howWeBuiltSuperDash": {
+    "howWeBuiltCKSoccer": "how we built CKSoccer",
+    "@howWeBuiltCKSoccer": {
         "description": "Text shown in the game info popup"
     },
     "inFlutterAndGrabThe": " in Flutter and grab the ",
@@ -136,7 +136,7 @@
     "@scoreSubmissionErrorMessage": {
         "description": "Text shown in the score submission page"
     },
-    "shareYourScore": "Share your Super Dash score and challenge your friends to do more!",
+    "shareYourScore": "Share your CKSoccer score and challenge your friends to do more!",
     "@shareYourScore": {
         "description": "Text shown in the share page"
     },
@@ -205,7 +205,7 @@
     "@tapToStart": {
         "description": "Text shown in the game page"
     },
-    "downloadAppMessage": "Fly into Super Dash, avoid the bugs, collect points, and see how far you can go!",
+    "downloadAppMessage": "Fly into CKSoccer, avoid the bugs, collect points, and see how far you can go!",
     "@downloadAppMessage": {
         "description": "Text shown in the download mobile app page"
     },

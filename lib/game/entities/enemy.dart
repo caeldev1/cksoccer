@@ -3,7 +3,7 @@ import 'package:flame_tiled/flame_tiled.dart';
 import 'package:flutter/material.dart';
 import 'package:leap/leap.dart';
 import 'package:pathxp/pathxp.dart';
-import 'package:super_dash/game/game.dart';
+import 'package:ck_soccer/game/game.dart';
 
 enum EnemyType {
   bettle,
@@ -32,7 +32,7 @@ enum EnemyType {
   }
 }
 
-class Enemy extends PhysicalEntity<SuperDashGame> {
+class Enemy extends PhysicalEntity<CKSoccer> {
   Enemy({
     required this.tiledObject,
     this.enemyDamage = 1,

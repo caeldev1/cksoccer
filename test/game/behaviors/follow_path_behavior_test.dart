@@ -6,7 +6,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:leap/leap.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:pathxp/pathxp.dart';
-import 'package:super_dash/game/game.dart';
+import 'package:ck_soccer/game/game.dart';
 
 class _MockSprite extends Mock implements Sprite {}
 

@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:super_dash/settings/persistence/persistence.dart';
-import 'package:super_dash/settings/settings.dart';
+import 'package:ck_soccer/settings/persistence/persistence.dart';
+import 'package:ck_soccer/settings/settings.dart';
 
 class _MockSettingsPersistence extends Mock implements SettingsPersistence {}
 

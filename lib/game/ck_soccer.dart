@@ -11,9 +11,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:leap/leap.dart';
-import 'package:super_dash/audio/audio.dart';
-import 'package:super_dash/game/game.dart';
-import 'package:super_dash/score/score.dart';
+import 'package:ck_soccer/audio/audio.dart';
+import 'package:ck_soccer/game/game.dart';
+import 'package:ck_soccer/score/score.dart';
 
 bool _tsxPackingFilter(Tileset tileset) {
   return !(tileset.source ?? '').startsWith('anim');
@@ -25,9 +25,9 @@ Paint _layerPaintFactory(double opacity) {
     ..isAntiAlias = false;
 }
 
-class SuperDashGame extends LeapGame
+class CKSoccer extends LeapGame
     with TapDetector, HasKeyboardHandlerComponents {
-  SuperDashGame({
+  CKSoccer({
     required this.gameBloc,
     required this.audioController,
     this.customBundle,

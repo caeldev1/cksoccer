@@ -3,11 +3,11 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:leaderboard_repository/leaderboard_repository.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:super_dash/app/app.dart';
-import 'package:super_dash/audio/audio.dart';
-import 'package:super_dash/game_intro/game_intro.dart';
-import 'package:super_dash/settings/settings.dart';
-import 'package:super_dash/share/share.dart';
+import 'package:ck_soccer/app/app.dart';
+import 'package:ck_soccer/audio/audio.dart';
+import 'package:ck_soccer/game_intro/game_intro.dart';
+import 'package:ck_soccer/settings/settings.dart';
+import 'package:ck_soccer/share/share.dart';
 
 class _MockAudioController extends Mock implements AudioController {}
 

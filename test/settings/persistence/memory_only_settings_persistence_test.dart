@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:super_dash/settings/persistence/persistence.dart';
+import 'package:ck_soccer/settings/persistence/persistence.dart';
 
 void main() {
   group('MemoryOnlySettingsPersistence', () {

@@ -1,5 +1,5 @@
 name: app_ui
-description: App UI Package of the Super Dash game.
+description: App UI package for CKSoccer.
 version: 0.1.0+1
 publish_to: none
 

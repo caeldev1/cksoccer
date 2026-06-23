@@ -5,10 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:super_dash/audio/audio.dart';
-import 'package:super_dash/game/super_dash_game.dart';
-import 'package:super_dash/map_tester/map_tester.dart';
-import 'package:super_dash/settings/settings_controller.dart';
+import 'package:ck_soccer/audio/audio.dart';
+import 'package:ck_soccer/game/ck_soccer.dart';
+import 'package:ck_soccer/map_tester/map_tester.dart';
+import 'package:ck_soccer/settings/settings_controller.dart';
 
 import '../../helpers/helpers.dart';
 
@@ -50,7 +50,7 @@ void main() {
       await tester.pump();
 
       expect(
-        find.byType(GameWidget<SuperDashGame>),
+        find.byType(GameWidget<CKSoccer>),
         findsOneWidget,
       );
     });
@@ -68,7 +68,7 @@ void main() {
       await tester.pump();
 
       expect(
-        find.byType(GameWidget<SuperDashGame>),
+        find.byType(GameWidget<CKSoccer>),
         findsOneWidget,
       );
 
@@ -76,7 +76,7 @@ void main() {
       await tester.pump();
 
       expect(
-        find.byType(GameWidget<SuperDashGame>),
+        find.byType(GameWidget<CKSoccer>),
         findsNothing,
       );
     });
@@ -93,8 +93,8 @@ void main() {
       await tester.tap(find.text('Load'));
       await tester.pump();
 
-      var widget = tester.widget<GameWidget<SuperDashGame>>(
-        find.byType(GameWidget<SuperDashGame>),
+      var widget = tester.widget<GameWidget<CKSoccer>>(
+        find.byType(GameWidget<CKSoccer>),
       );
 
       final originalGame = widget.game;
@@ -103,8 +103,8 @@ void main() {
       await tester.tap(find.text('Reload'));
       await tester.pumpAndSettle();
 
-      widget = tester.widget<GameWidget<SuperDashGame>>(
-        find.byType(GameWidget<SuperDashGame>),
+      widget = tester.widget<GameWidget<CKSoccer>>(
+        find.byType(GameWidget<CKSoccer>),
       );
 
       final updatedGame = widget.game;

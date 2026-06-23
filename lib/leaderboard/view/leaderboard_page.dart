@@ -7,11 +7,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:leaderboard_repository/leaderboard_repository.dart';
-import 'package:super_dash/game/game.dart';
-import 'package:super_dash/gen/assets.gen.dart';
-import 'package:super_dash/l10n/l10n.dart';
-import 'package:super_dash/leaderboard/bloc/leaderboard_bloc.dart';
-import 'package:super_dash/score/score.dart';
+import 'package:ck_soccer/game/game.dart';
+import 'package:ck_soccer/gen/assets.gen.dart';
+import 'package:ck_soccer/l10n/l10n.dart';
+import 'package:ck_soccer/leaderboard/bloc/leaderboard_bloc.dart';
+import 'package:ck_soccer/score/score.dart';
 
 enum LeaderboardStep { gameIntro, gameScore }
 

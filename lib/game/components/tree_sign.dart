@@ -3,9 +3,9 @@ import 'dart:ui';
 
 import 'package:flame/components.dart';
 import 'package:flame/text.dart';
-import 'package:super_dash/game/super_dash_game.dart';
+import 'package:ck_soccer/game/ck_soccer.dart';
 
-class TreeSign extends TextComponent with HasGameRef<SuperDashGame> {
+class TreeSign extends TextComponent with HasGameRef<CKSoccer> {
   TreeSign({
     super.position,
   }) : super(

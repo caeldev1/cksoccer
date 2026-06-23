@@ -97,7 +97,7 @@ abstract class AppLocalizations {
   /// Text shown in the Headline of the Game Info Page
   ///
   /// In en, this message translates to:
-  /// **'Fly into Super Dash, avoid the bugs, collect points, and see how far you can go!'**
+  /// **'Swipe to meet the team — then tap Play!'**
   String get gameIntroPageHeadline;
 
   /// Text shown in the Play button of the Game Info Page
@@ -115,7 +115,7 @@ abstract class AppLocalizations {
   /// Text shown in the description of the auto run instruction of the Game Instructions Overlay
   ///
   /// In en, this message translates to:
-  /// **'Welcome to Super Dash. In this game Dash runs automatically.'**
+  /// **'Welcome to CKSoccer. In this game Dash runs automatically.'**
   String get gameInstructionsPageAutoRunDescription;
 
   /// Text shown in the title of the tap to jump instruction of the Game Instructions Overlay
@@ -211,8 +211,8 @@ abstract class AppLocalizations {
   /// Game name
   ///
   /// In en, this message translates to:
-  /// **'Super Dash'**
-  String get superDash;
+  /// **'CKSoccer'**
+  String get ckSoccer;
 
   /// Text shown in the game info page
   ///
@@ -223,8 +223,8 @@ abstract class AppLocalizations {
   /// Text shown in the game info popup
   ///
   /// In en, this message translates to:
-  /// **'About Super Dash'**
-  String get aboutSuperDash;
+  /// **'About CKSoccer'**
+  String get aboutCKSoccer;
 
   /// Text shown in the game info popup
   ///
@@ -235,8 +235,8 @@ abstract class AppLocalizations {
   /// Text shown in the game info popup
   ///
   /// In en, this message translates to:
-  /// **'how we built Super Dash'**
-  String get howWeBuiltSuperDash;
+  /// **'how we built CKSoccer'**
+  String get howWeBuiltCKSoccer;
 
   /// Text shown in the game info popup
   ///
@@ -301,7 +301,7 @@ abstract class AppLocalizations {
   /// Text shown in the share page
   ///
   /// In en, this message translates to:
-  /// **'Share your Super Dash score and challenge your friends to do more!'**
+  /// **'Share your CKSoccer score and challenge your friends to do more!'**
   String get shareYourScore;
 
   /// Text shown in the share page
@@ -397,7 +397,7 @@ abstract class AppLocalizations {
   /// Text shown in the download mobile app page
   ///
   /// In en, this message translates to:
-  /// **'Fly into Super Dash, avoid the bugs, collect points, and see how far you can go!'**
+  /// **'Fly into CKSoccer, avoid the bugs, collect points, and see how far you can go!'**
   String get downloadAppMessage;
 
   /// Button lable for the app download

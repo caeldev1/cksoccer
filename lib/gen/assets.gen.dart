@@ -24,6 +24,18 @@ class $AssetsImagesGen {
   AssetGenImage get collectEggsAcornsInstruction =>
       const AssetGenImage('assets/images/collect_eggs_acorns_instruction.png');
 
+  /// File path: assets/images/ck1.png
+  AssetGenImage get ck1 => const AssetGenImage('assets/images/ck1.png');
+
+  /// File path: assets/images/ck2.png
+  AssetGenImage get ck2 => const AssetGenImage('assets/images/ck2.png');
+
+  /// File path: assets/images/ck3.png
+  AssetGenImage get ck3 => const AssetGenImage('assets/images/ck3.png');
+
+  /// File path: assets/images/ck4.png
+  AssetGenImage get ck4 => const AssetGenImage('assets/images/ck4.png');
+
   /// File path: assets/images/dash_wins.png
   AssetGenImage get dashWins =>
       const AssetGenImage('assets/images/dash_wins.png');
@@ -83,6 +95,10 @@ class $AssetsImagesGen {
         autoRunInstruction,
         avoidBugsInstruction,
         collectEggsAcornsInstruction,
+        ck1,
+        ck2,
+        ck3,
+        ck4,
         dashWins,
         gameBackground,
         gameLogo,

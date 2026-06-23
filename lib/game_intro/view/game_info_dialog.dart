@@ -3,9 +3,9 @@ import 'dart:ui';
 import 'package:app_ui/app_ui.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:super_dash/constants/constants.dart';
-import 'package:super_dash/gen/assets.gen.dart';
-import 'package:super_dash/l10n/l10n.dart';
+import 'package:ck_soccer/constants/constants.dart';
+import 'package:ck_soccer/gen/assets.gen.dart';
+import 'package:ck_soccer/l10n/l10n.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class GameInfoDialog extends StatelessWidget {
@@ -43,7 +43,7 @@ class GameInfoDialog extends StatelessWidget {
             child: Column(
               children: [
                 Text(
-                  l10n.aboutSuperDash,
+                  l10n.aboutCKSoccer,
                   style: Theme.of(context).textTheme.headlineSmall,
                 ),
                 const SizedBox(height: 24),
@@ -54,7 +54,7 @@ class GameInfoDialog extends StatelessWidget {
                     children: [
                       TextSpan(text: l10n.learn),
                       TextSpan(
-                        text: l10n.howWeBuiltSuperDash,
+                        text: l10n.howWeBuiltCKSoccer,
                         style: linkStyle,
                         recognizer: TapGestureRecognizer()
                           ..onTap = () => launchUrlString(Urls.howWeBuilt),

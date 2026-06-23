@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:super_dash/game/bloc/game_bloc.dart';
+import 'package:ck_soccer/game/bloc/game_bloc.dart';
 
 void main() {
   group('GameState', () {

@@ -4,10 +4,10 @@ import 'package:app_ui/app_ui.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:super_dash/game_intro/game_intro.dart';
-import 'package:super_dash/gen/assets.gen.dart';
-import 'package:super_dash/l10n/l10n.dart';
-import 'package:super_dash/utils/utils.dart';
+import 'package:ck_soccer/game_intro/game_intro.dart';
+import 'package:ck_soccer/gen/assets.gen.dart';
+import 'package:ck_soccer/l10n/l10n.dart';
+import 'package:ck_soccer/utils/utils.dart';
 
 class GameInstruction extends Equatable {
   const GameInstruction({

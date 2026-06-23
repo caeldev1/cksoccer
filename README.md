@@ -1,4 +1,4 @@
-# Super Dash
+# CKSoccer
 
 ![coverage][coverage_badge]
 [![style: very good analysis][very_good_analysis_badge]][very_good_analysis_link]
@@ -35,7 +35,7 @@ $ flutter run --flavor staging --target lib/main_tester.dart
 $ flutter run --flavor production --target lib/main_prod.dart
 ```
 
-_\*Super Dash works on iOS, Android, Web, and Windows._
+_\*CKSoccer works on iOS, Android, Web, and Windows._
 
 ---
 

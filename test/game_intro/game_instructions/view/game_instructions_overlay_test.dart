@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:super_dash/game_intro/game_instructions/game_instructions.dart';
+import 'package:ck_soccer/game_intro/game_instructions/game_instructions.dart';
 
 import '../../../helpers/helpers.dart';
 

@@ -5,7 +5,7 @@ import 'package:flame/effects.dart';
 import 'package:flame_tiled/flame_tiled.dart';
 import 'package:flutter/material.dart';
 import 'package:leap/leap.dart';
-import 'package:super_dash/game/super_dash_game.dart';
+import 'package:ck_soccer/game/ck_soccer.dart';
 
 enum ItemType {
   acorn(10),
@@ -26,7 +26,7 @@ enum ItemType {
   }
 }
 
-class Item extends PhysicalEntity<SuperDashGame> {
+class Item extends PhysicalEntity<CKSoccer> {
   Item({
     required this.tiledObject,
   }) : super(static: true, collisionType: CollisionType.standard);

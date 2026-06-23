@@ -1,10 +1,10 @@
 import 'dart:async';
 
 import 'package:flame/components.dart';
-import 'package:super_dash/game/game.dart';
+import 'package:ck_soccer/game/game.dart';
 
 class ItemEffect extends SpriteAnimationComponent
-    with HasGameRef<SuperDashGame> {
+    with HasGameRef<CKSoccer> {
   ItemEffect({
     required this.type,
     super.position,

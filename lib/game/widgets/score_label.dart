@@ -1,9 +1,9 @@
 import 'package:app_ui/app_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:super_dash/game/bloc/game_bloc.dart';
-import 'package:super_dash/gen/assets.gen.dart';
-import 'package:super_dash/l10n/l10n.dart';
+import 'package:ck_soccer/game/bloc/game_bloc.dart';
+import 'package:ck_soccer/gen/assets.gen.dart';
+import 'package:ck_soccer/l10n/l10n.dart';
 
 class ScoreLabel extends StatelessWidget {
   const ScoreLabel({super.key});

@@ -9,8 +9,7 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get gameIntroPageHeadline =>
-      'Fly into Super Dash, avoid the bugs, collect points, and see how far you can go!';
+  String get gameIntroPageHeadline => 'Swipe to meet the team — then tap Play!';
 
   @override
   String get gameIntroPagePlayButtonText => 'Play';
@@ -20,7 +19,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get gameInstructionsPageAutoRunDescription =>
-      'Welcome to Super Dash. In this game Dash runs automatically.';
+      'Welcome to CKSoccer. In this game Dash runs automatically.';
 
   @override
   String get gameInstructionsPageTapToJumpTitle => 'Tap to Jump';
@@ -76,19 +75,19 @@ class AppLocalizationsEn extends AppLocalizations {
       'in the repo and look for the apps available for download in stores soon! Open this link on a desktop web browser to play today.';
 
   @override
-  String get superDash => 'Super Dash';
+  String get ckSoccer => 'CKSoccer';
 
   @override
   String get howItsMade => 'How it\'s made';
 
   @override
-  String get aboutSuperDash => 'About Super Dash';
+  String get aboutCKSoccer => 'About CKSoccer';
 
   @override
   String get learn => 'Learn ';
 
   @override
-  String get howWeBuiltSuperDash => 'how we built Super Dash';
+  String get howWeBuiltCKSoccer => 'how we built CKSoccer';
 
   @override
   String get inFlutterAndGrabThe => ' in Flutter and grab the ';
@@ -123,7 +122,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get shareYourScore =>
-      'Share your Super Dash score and challenge your friends to do more!';
+      'Share your CKSoccer score and challenge your friends to do more!';
 
   @override
   String get pts => 'Pts';
@@ -175,7 +174,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get downloadAppMessage =>
-      'Fly into Super Dash, avoid the bugs, collect points, and see how far you can go!';
+      'Fly into CKSoccer, avoid the bugs, collect points, and see how far you can go!';
 
   @override
   String get downloadAppLabel => 'Download the app';

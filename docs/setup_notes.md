@@ -21,7 +21,7 @@ flame_tiled from git.
 | `leap`       | `VeryGoodOpenSource/leap` @ `vgv`                   | `^0.10.1`        |
 | `flame_tiled`| `flame-engine/flame` @ `main`                       | `^0.11.0`        |
 
-The solver cannot satisfy both `tiled` ranges at once. The `leap` vgv fork was added for Super Dash–specific tile-atlas behavior; overriding `flame_tiled` to Flame `main` (a much newer line) introduced the mismatch.
+The solver cannot satisfy both `tiled` ranges at once. The `leap` vgv fork was added for CKSoccer–specific tile-atlas behavior; overriding `flame_tiled` to Flame `main` (a much newer line) introduced the mismatch.
 
 The original `leap` vgv `pubspec.yaml` expected a short-lived git branch (`erick.tile-atlas-padding`) for `flame_tiled`. That branch no longer exists on the Flame repo, and pinning `flame_tiled` to `main` is not a safe substitute.
 

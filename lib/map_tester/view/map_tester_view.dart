@@ -5,10 +5,10 @@ import 'package:flame/game.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:super_dash/filesytem_asset_bundle/filesystem_asset_bundle.dart';
-import 'package:super_dash/game/game.dart';
-import 'package:super_dash/map_tester/map_tester.dart';
-import 'package:super_dash/settings/settings_controller.dart';
+import 'package:ck_soccer/filesytem_asset_bundle/filesystem_asset_bundle.dart';
+import 'package:ck_soccer/game/game.dart';
+import 'package:ck_soccer/map_tester/map_tester.dart';
+import 'package:ck_soccer/settings/settings_controller.dart';
 
 typedef GetDirectoryPath = Future<String?> Function();
 
@@ -31,7 +31,7 @@ class MapTesterView extends StatefulWidget {
 }
 
 class _MapTesterViewState extends State<MapTesterView> {
-  SuperDashGame? game;
+  CKSoccer? game;
   String? rootPath;
 
   double? speed;
@@ -53,7 +53,7 @@ class _MapTesterViewState extends State<MapTesterView> {
       if (directory != null) {
         setState(() {
           rootPath = directory;
-          game = SuperDashGame(
+          game = CKSoccer(
             gameBloc: GameBloc(),
             customBundle: FileSystemAssetBundle(directory),
             audioController: context.read(),
@@ -63,7 +63,7 @@ class _MapTesterViewState extends State<MapTesterView> {
       }
     } else {
       setState(() {
-        game = SuperDashGame(
+        game = CKSoccer(
           gameBloc: GameBloc(),
           audioController: context.read(),
           inMapTester: true,
@@ -73,16 +73,16 @@ class _MapTesterViewState extends State<MapTesterView> {
   }
 
   Future<void> _reload() async {
-    late SuperDashGame newGame;
+    late CKSoccer newGame;
     if (!kIsWeb && Platform.isMacOS) {
-      newGame = SuperDashGame(
+      newGame = CKSoccer(
         gameBloc: GameBloc(),
         audioController: context.read(),
         customBundle: FileSystemAssetBundle(rootPath!),
         inMapTester: true,
       );
     } else {
-      newGame = SuperDashGame(
+      newGame = CKSoccer(
         gameBloc: GameBloc(),
         audioController: context.read(),
         inMapTester: true,

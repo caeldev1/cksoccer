@@ -1,6 +1,6 @@
-# Super Dash — Current Architecture
+# CKSoccer — Current Architecture
 
-Audit snapshot for the cloned [Super Dash](https://github.com/flutter/super_dash) Flutter platformer. This document describes how the project is wired today, before any Chicken Soccer gameplay changes.
+Audit snapshot for the cloned [CKSoccer](https://github.com/flutter/super_dash) Flutter platformer. This document describes how the project is wired today, before any Chicken Soccer gameplay changes.
 
 > **Note:** `docs/project_brief.md` is not present in this repo. Task context lives in `docs/tasks.md`.
 
@@ -45,7 +45,7 @@ GameIntroPage
     ▼
 Game (BlocProvider<GameBloc>)
     └── GameView
-            ├── GameWidget → SuperDashGame (Flame)
+            ├── GameWidget → CKSoccer (Flame)
             ├── ScoreLabel (Flutter HUD)
             ├── AudioButton
             └── overlay: tapToJump
@@ -72,20 +72,20 @@ ScorePage (FlowBuilder)
 ### Active run (`lib/game/view/game_view.dart`)
 
 - `Game` creates a scoped `GameBloc`.
-- `GameWidget.controlled` hosts `SuperDashGame` with one Flame overlay (`tapToJump`).
+- `GameWidget.controlled` hosts `CKSoccer` with one Flame overlay (`tapToJump`).
 - Flutter widgets sit above the game canvas: `ScoreLabel` (top), `AudioButton` (bottom).
 
 ### Post-run (`lib/score/`)
 
-- `SuperDashGame.gameOver()` resets run state, reloads map A, then `Navigator.push(ScorePage.route(score: …))`.
+- `CKSoccer.gameOver()` resets run state, reloads map A, then `Navigator.push(ScorePage.route(score: …))`.
 - `ScoreBloc` drives a `flow_builder` flow: game over → initials → overview → leaderboard.
 - Leaderboard writes to Firestore via `LeaderboardRepository`.
 
 ---
 
-## Flame game class: `SuperDashGame`
+## Flame game class: `CKSoccer`
 
-**File:** `lib/game/super_dash_game.dart`
+**File:** `lib/game/ck_soccer.dart`
 
 Extends **`LeapGame`** (from the `leap` package) with `TapDetector` and `HasKeyboardHandlerComponents`.
 
@@ -120,7 +120,7 @@ Extends **`LeapGame`** (from the `leap` package) with `TapDetector` and `HasKeyb
 
 **File:** `lib/game/entities/player.dart`
 
-- Extends **`JumperCharacter<SuperDashGame>`** (Leap) — auto-run platformer with jump physics.
+- Extends **`JumperCharacter<CKSoccer>`** (Leap) — auto-run platformer with jump physics.
 - Constants: `speed = 5.0`, `jumpImpulse = 0.6`, `initialHealth = 1`.
 - Spawn/respawn positions come from Tiled object layers `spawn` and `respawn`.
 
@@ -219,7 +219,7 @@ Collision geometry and hazard tags come from Leap’s tiled collision parsing (t
 
 - Acorn pickup: **+10** (`ItemType.acorn`)
 - Egg pickup: **+1000** (`ItemType.egg`)
-- Section complete: **+1000 × currentLevel** (`SuperDashGame.sectionCleared()`)
+- Section complete: **+1000 × currentLevel** (`CKSoccer.sectionCleared()`)
 
 ### Post-run: `ScoreBloc`
 
@@ -257,7 +257,7 @@ overlayBuilderMap: {
 initialActiveOverlays: const ['tapToJump'],
 ```
 
-Removed on first tap or spacebar in `SuperDashGame`.
+Removed on first tap or spacebar in `CKSoccer`.
 
 ---
 
@@ -278,13 +278,13 @@ assets:
 
 ### In-game image prefix
 
-`SuperDashGame` sets `Images(prefix: 'assets/map/')` for Flame gameplay assets. UI images use Flutter asset paths directly or via **`lib/gen/assets.gen.dart`** (FlutterGen).
+`CKSoccer` sets `Images(prefix: 'assets/map/')` for Flame gameplay assets. UI images use Flutter asset paths directly or via **`lib/gen/assets.gen.dart`** (FlutterGen).
 
 ### Animation loading patterns
 
 1. **Player states** — `PlayerStateBehavior` loads sequenced animations from `anim/spritesheet_dash_*.png` and `spritesheet_phoenixDash_*.png`.
 2. **Enemies / items** — entity `onLoad()` loads type-specific sheets under `assets/map/anim/`.
-3. **Acorns** — static tiles from `objects/tile_items_v2.png` via `itemsSpritesheet` built in `SuperDashGame.onLoad()`.
+3. **Acorns** — static tiles from `objects/tile_items_v2.png` via `itemsSpritesheet` built in `CKSoccer.onLoad()`.
 
 ### Audio
 
@@ -305,7 +305,7 @@ lib/
 ├── app/view/app.dart                 # MaterialApp root
 ├── game_intro/                       # Intro, instructions, bottom bar buttons
 ├── game/
-│   ├── super_dash_game.dart          # Flame/Leap game root
+│   ├── ck_soccer.dart          # Flame/Leap game root
 │   ├── view/game_view.dart           # GameWidget + HUD stack
 │   ├── entities/                     # Player, Enemy, Item
 │   ├── behaviors/                    # Input, animation state, path follow
@@ -346,8 +346,8 @@ See `docs/setup_notes.md` for the CS-000 dependency resolution (`leap` vgv + pub
 
 ## Debug / dev tools
 
-- **Map tester** (`lib/map_tester/`) — `main_tester.dart` entry; `SuperDashGame(inMapTester: true)` shows FPS and camera bounds.
-- **Cheat helpers** on `SuperDashGame`: `toggleInvincibility()`, `teleportPlayerToEnd()`, `showHitBoxes()`, `addCameraDebugger()`.
+- **Map tester** (`lib/map_tester/`) — `main_tester.dart` entry; `CKSoccer(inMapTester: true)` shows FPS and camera bounds.
+- **Cheat helpers** on `CKSoccer`: `toggleInvincibility()`, `teleportPlayerToEnd()`, `showHitBoxes()`, `addCameraDebugger()`.
 
 ---
 

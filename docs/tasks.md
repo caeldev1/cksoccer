@@ -3,7 +3,7 @@ Status: done
 Title: Fix cloned project dependency resolution and restore a runnable baseline
 
 Goal:
-Resolve package version conflicts in the cloned Super Dash project so flutter pub get and the default run flow work again.
+Resolve package version conflicts in the cloned CKSoccer project so flutter pub get and the default run flow work again.
 
 Scope:
 - Inspect pubspec.yaml and any dependency lock files.
@@ -36,10 +36,10 @@ Manual tests:
 
 ## CS-001
 Status: done
-Title: Audit the cloned Super Dash project and document the current architecture
+Title: Audit the cloned CKSoccer project and document the current architecture
 
 Goal:
-Understand the existing Super Dash structure before any gameplay changes.
+Understand the existing CKSoccer structure before any gameplay changes.
 
 Scope:
 - Inspect the main entry points, Flame game class, level flow, HUD, assets, player logic, obstacle logic, and score logic.
@@ -61,30 +61,38 @@ Manual tests:
 - Confirm the game still runs unchanged after documentation work.
 
 ## CS-002
-Status: in_progress
-Title: Rebrand the project from Super Dash to Chicken Soccer in user-facing surfaces
+Status: done
+Title: Rebrand the project from Super Dash to CKSoccer
 
 Goal:
-Rename the visible game identity without breaking the current build.
+Rename the game identity to CKSoccer (fork appropriation) without breaking the current build.
 
 Scope:
-- Replace user-facing references to Super Dash with Chicken Soccer.
-- Update app title, basic menu copy, and visible labels where appropriate.
+- Rename Dart package from `super_dash` to `ck_soccer`.
+- Rename `SuperDashGame` to `CKSoccer` and `super_dash_game.dart` to `ck_soccer.dart`.
+- Replace user-facing references to Super Dash with CKSoccer.
+- Update app title, basic menu copy, l10n keys, and visible labels where appropriate.
 
 Do not change:
-- Package ids unless explicitly needed later.
+- Native store bundle/application ids (Firebase and store links still reference upstream).
 - Core gameplay.
 
 Affected files:
 - pubspec.yaml
-- app title / UI copy files
-- platform display name files if safe
+- lib/game/ck_soccer.dart (formerly super_dash_game.dart)
+- package imports across lib/ and test/
+- l10n arb and generated localization files
+- platform display name files (AndroidManifest, Info.plist, web/index.html)
+- share hashtag copy
 
 Definition of done:
-- The app launches with Chicken Soccer as the visible title.
+- The app launches with CKSoccer as the visible title.
+- `SuperDashGame` is renamed to `CKSoccer` everywhere it is used.
 - No visible Super Dash naming remains in the main user flow.
 
 Manual tests:
+- Run `flutter pub get`
+- Run `flutter analyze`
 - Launch the game and verify updated title and visible copy.
 
 ## CS-003
@@ -249,7 +257,7 @@ Affected files:
 - menu / game over UI
 
 Definition of done:
-- The interface reads as a football arcade runner, not as Super Dash.
+- The interface reads as a football arcade runner, not as CKSoccer.
 
 Manual tests:
 - Verify HUD remains readable on mobile-sized screens.

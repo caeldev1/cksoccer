@@ -7,9 +7,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:leaderboard_repository/leaderboard_repository.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:super_dash/l10n/l10n.dart';
-import 'package:super_dash/leaderboard/leaderboard.dart';
-import 'package:super_dash/score/score.dart';
+import 'package:ck_soccer/l10n/l10n.dart';
+import 'package:ck_soccer/leaderboard/leaderboard.dart';
+import 'package:ck_soccer/score/score.dart';
 
 import '../../helpers/helpers.dart';
 

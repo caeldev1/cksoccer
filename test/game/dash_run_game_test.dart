@@ -5,8 +5,8 @@ import 'package:flame/components.dart';
 import 'package:flame_test/flame_test.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:super_dash/audio/audio.dart';
-import 'package:super_dash/game/game.dart';
+import 'package:ck_soccer/audio/audio.dart';
+import 'package:ck_soccer/game/game.dart';
 
 class _MockGameBloc extends MockBloc<GameEvent, GameState>
     implements GameBloc {}
@@ -16,7 +16,7 @@ class _MockAudioController extends Mock implements AudioController {}
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  group('SuperDashGame', () {
+  group('CKSoccer', () {
     late GameBloc gameBloc;
     late AudioController audioController;
 
@@ -27,8 +27,8 @@ void main() {
       when(() => gameBloc.state).thenReturn(const GameState.initial());
     });
 
-    SuperDashGame createGame() {
-      return SuperDashGame(
+    CKSoccer createGame() {
+      return CKSoccer(
         gameBloc: gameBloc,
         audioController: audioController,
       );
